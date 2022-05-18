@@ -5,6 +5,20 @@ void main(List<String> arguments) {
   App app = App("Amir");
 
   app.sout();
-  app.menjadiPaksa(10);
 
+  callback(() {
+    print("Hello");
+  });
+
+  callbackWithArgument("Fira", (argument) {
+    print(argument);
+  });
+}
+
+void callback(Function callback) {
+  callback();
+}
+
+void callbackWithArgument(String argument, Function callback) {
+  callback(argument);
 }

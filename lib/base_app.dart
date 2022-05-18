@@ -7,7 +7,12 @@ class BaseApp<T> {
     print(data.toString());
   }
 
-  void menjadiPaksa<V>(V nama) {
-    print(nama.toString());
+  void callback(Function callback) {
+    callback();
   }
+
+  void callbackWithArgument(String argument, Function callback) {
+    callback(argument);
+  }
+
 }
